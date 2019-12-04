@@ -1,5 +1,6 @@
 <html>
-  <title>Canvas< Intro</title>
+
+  <title>HW Racing Game 2020</title>
   <head>
   <script type="text/javascript" src="config.js"></script>
   <script type="text/javascript" src="car.js"></script>
@@ -7,11 +8,42 @@
   <script type="text/javascript" src="obstacles.js"></script>
   <script type="text/javascript" src="main.js"></script>
   <head>
-  <body onload="Start()">
+  <body onload="Start()" background="bg.jpg">
+    <div style="text-align: center">
     <canvas id="mainCanvas" width="600" height="300"  style="border:1px solid black;">
     </canvas>
+  </div>
   </body>
+<script>
+  function isMacintosh() {
+  return navigator.platform.indexOf('Mac') > -1
+}
 
+function isWindows() {
+  return navigator.platform.indexOf('Win') > -1
+}
+var isMac = isMacintosh();
+var isWindows = isWindows();
+if (isMacintosh === true)
+{
+  alert("Are you running this on a Mac? Here's why you shouldn't use it: https://stallman.org/apple.html");
+  alert("I will be redirecting you to a more acceptable alternative");
+  window.location = "https://www.gentoo.org/";
+
+}
+if (isWindows ===true)
+{
+    alert("I'm detecting Windows here...  Here's why you shouldn't use it: https://stallman.org/microsoft.html");
+  alert("I will be redirecting you to a more acceptable alternative");
+  window.location = "https://9p.io/plan9/";
+}
+  myMusic = new Audio("gtavc.mp3");
+myMusic.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+  myMusic.play();
+</script>
   <!-- Load the keyboard control AFTER the page has loaded -->
   <script type="text/javascript" src="keyboardControl.js" ></script>
   <script type="text/javascript" src="animate.js" ></script>
