@@ -24,18 +24,22 @@ function isWindows() {
 }
 var isMac = isMacintosh();
 var isWindows = isWindows();
-if (isMacintosh === true)
+runcheck = Math.floor(Math.random() * 10) + 1;
+if (runcheck >= 5)
 {
-  alert("Are you running this on a Mac? Here's why you shouldn't use it: https://stallman.org/apple.html");
-  alert("I will be redirecting you to a more acceptable alternative");
-  window.location = "https://www.gentoo.org/";
+  if (isMacintosh === true)
+  {
+    alert("Are you running this on a Mac? Here's why you shouldn't use it: https://stallman.org/apple.html");
+    alert("I will be redirecting you to a more acceptable alternative");
+    window.location = "https://www.gentoo.org/";
 
+  }
+  if (isWindows ===true)
+  {
+      alert("I'm detecting Windows here...  Here's why you shouldn't use it: https://stallman.org/microsoft.html");
+    alert("I will be redirecting you to a more acceptable alternative");
+    window.location = "https://9p.io/plan9/";
 }
-if (isWindows ===true)
-{
-    alert("I'm detecting Windows here...  Here's why you shouldn't use it: https://stallman.org/microsoft.html");
-  alert("I will be redirecting you to a more acceptable alternative");
-  window.location = "https://9p.io/plan9/";
 }
   myMusic = new Audio("gtavc.mp3");
 myMusic.addEventListener('ended', function() {
