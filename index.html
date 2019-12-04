@@ -15,32 +15,6 @@
   </div>
   </body>
 <script>
-  function isMacintosh() {
-  return navigator.platform.indexOf('Mac') > -1
-}
-
-function isWindows() {
-  return navigator.platform.indexOf('Win') > -1
-}
-var isMac = isMacintosh();
-var isWindows = isWindows();
-runcheck = Math.floor(Math.random() * 10) + 1;
-if (runcheck >= 8)
-{
-  if (isMacintosh === true)
-  {
-    alert("Are you running this on a Mac?");
-    alert("I will be redirecting you to a more acceptable alternative");
-    window.location = "https://www.gentoo.org/";
-
-  }
-  if (isWindows ===true)
-  {
-      alert("I'm detecting Windows here...");
-    alert("I will be redirecting you to a more acceptable alternative");
-    window.location = "https://9p.io/plan9/";
-}
-}
   myMusic = new Audio("https://hwracinggame2020.github.io/gtavc.mp3");
 myMusic.addEventListener('ended', function() {
     this.currentTime = 0;
